@@ -1,3 +1,11 @@
+/* valid names for custom property  */
+:root{
+    --special-color: tomato;
+    --second-color: violet;
+    --light-color: white;
+    --dark-color: black;
+}
+
 .container{
     max-width: 900px;
     margin: 0 auto;
@@ -42,7 +50,49 @@ a[href="#"]{
     color: fuchsia;
 }
 
+
+/* ^= is to check if value begins with */
 a[href^="http"]{
     border-left: 24px solid orange;
     padding-left: 1rem;;
+}
+
+/* State related Pseudo classes */
+/* the order of State is LoVe HAte */
+nav a,
+nav a:link,
+nav a:visited{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0,5s;
+}
+
+nav a:hover,
+nav a:focus{
+    text-decoration: underline;
+    transform: scale(1.4);
+}
+
+nav a:active{
+    transform: scale(1.4) translateX(10px);
+}
+
+
+/* Pseudo Elements */
+a[hred$=".pdf"]::after{
+    content: "\2913";
+    font-size: 1.25rem;
+    color: var(--second-color)
+}
+
+h2+p::first-line{
+    color: var(--light-color)
+}
+
+h2+p::first-letter{
+    background-color: var(--special-color)
+    color: blue;
+    padding: 0.25rem;
+    margin-right: 0.10rem;
 }
