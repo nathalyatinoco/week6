@@ -1,0 +1,48 @@
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* space is Descendent combinator */
+nav ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* space is Descendent combinator */
+nav ul li{
+    flex: 1;
+}
+
+/* > is a child combinator */
+main > p{
+    font-size: 1.25rem;
+}
+
+/* + is a adjacent combinator */
+h2+p{
+    background-color: black;
+    color: violet;
+    padding: 1rem;
+}
+
+/* ~ is Sibling combinator */
+.stars span:hover ~ span{
+    opacity: 0.5;
+}
+
+.stars span{
+    cursor: pointer;
+}
+
+/* [] is to use attributes a selectors */
+a[href="#"]{
+    color: fuchsia;
+}
+
+a[href^="http"]{
+    border-left: 24px solid orange;
+    padding-left: 1rem;;
+}
